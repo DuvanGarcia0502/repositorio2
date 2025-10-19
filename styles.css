@@ -9,11 +9,13 @@
   --shadow: 0 4px 12px rgba(0,0,0,0.1);
   --transition: all 0.3s ease;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: var(--primary-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -21,7 +23,8 @@ body {
   color: var(--dark-color);
   padding: 20px;
 }
-.site-header {
+
+.encabezado-sitio {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,13 +38,13 @@ body {
   z-index: 1000;
 }
 
-.site-header nav ul {
+.encabezado-sitio nav ul {
   display: flex;
   gap: 40px;
   list-style: none;
 }
 
-.site-header nav a {
+.encabezado-sitio nav a {
   text-decoration: none;
   color: var(--dark-color);
   font-weight: 500;
@@ -51,11 +54,11 @@ body {
   gap: 8px;
 }
 
-.site-header nav a:hover {
+.encabezado-sitio nav a:hover {
   color: var(--primary-color);
 }
 
-.phone-contact {
+.contacto-telefono {
   color: var(--primary-color);
   font-weight: bold;
   display: flex;
@@ -63,13 +66,13 @@ body {
   gap: 8px;
 }
 
-.main-content {
+.contenido-principal {
   display: flex;
   min-height: 100vh;
   margin-top: 80px; 
 }
 
-.sidebar {
+.barra-lateral {
   width: 60px;
   background: var(--secondary-color);
   display: flex;
@@ -83,18 +86,18 @@ body {
   height: calc(100vh - 80px);
 }
 
-.sidebar .icon {
+.barra-lateral .icono {
   color: rgb(0, 0, 0);
   font-size: 24px;
   cursor: pointer;
   transition: transform 0.3s;
 }
 
-.sidebar .icon:hover {
+.barra-lateral .icono:hover {
   transform: scale(1.2);
 }
 
-.home {
+.inicio {
   background: white;
   width: 40px;
   height: 40px;
@@ -105,7 +108,8 @@ body {
   color: var(--secondary-color);
   margin-top: 10px;
 }
-.hero-section {
+
+.seccion-hero {
   flex: 1;
   position: relative;
   height: calc(100vh - 80px);
@@ -118,7 +122,7 @@ body {
   margin-left: 60px;
 }
 
-.hero-bg {
+.fondo-hero {
   position: absolute;
   top: 0;
   left: 0;
@@ -129,7 +133,7 @@ body {
   background: linear-gradient(to bottom, #16a085, #1abc9c);
 }
 
-.hero-overlay {
+.superposicion-hero {
   position: absolute;
   top: 0;
   left: 0;
@@ -139,7 +143,7 @@ body {
   z-index: 0;
 }
 
-.hero-text {
+.texto-hero {
   position: relative;
   z-index: 1;
   max-width: 500px;
@@ -147,20 +151,20 @@ body {
   text-align: left;
 }
 
-.hero-text h1 {
+.texto-hero h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
   line-height: 1.2;
   color: white;
 }
 
-.hero-text p {
+.texto-hero p {
   margin-bottom: 20px;
   font-size: 0.9rem;
   opacity: 0.9;
 }
 
-.cta-buttons {
+.botones-cta {
   display: flex;
   gap: 10px;
   margin-top: 20px;
@@ -178,48 +182,29 @@ body {
   cursor: pointer;
 }
 
-.btn-primary {
+.btn-principal {
   background: var(--primary-color);
   color: var(--text-color);
   border: none;
 }
 
-.btn-primary:hover {
+.btn-principal:hover {
   background: var(--secondary-color);
   transform: translateY(-2px);
 }
 
-.btn-secondary {
+.btn-secundario {
   background: rgba(255,255,255,0.2);
   color: var(--text-color);
   border: 1px solid rgba(255,255,255,0.3);
 }
 
-.btn-secondary:hover {
+.btn-secundario:hover {
   background: rgba(255,255,255,0.3);
   transform: translateY(-2px);
 }
 
-.slider-dots {
-  display: flex;
-  gap: 8px;
-  margin-top: 20px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.5);
-  cursor: pointer;
-}
-
-.dot.active {
-  background: white;
-}
-
-
-.form-sidebar {
+.barra-formulario {
   width: 350px;
   background: white;
   padding: 30px;
@@ -230,36 +215,37 @@ body {
   right: 0;
 }
 
-.form-sidebar h2 {
+.barra-formulario h2 {
   color: var(--primary-color);
   margin-bottom: 20px;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-#booking-form {
+#formulario-reserva {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.form-row {
+.fila-formulario {
   display: flex;
   gap: 10px;
 }
 
-.form-group {
+.grupo-formulario {
   flex: 1;
 }
 
-.form-group label {
+.grupo-formulario label {
   display: block;
   font-weight: 600;
   margin-bottom: 5px;
   color: var(--dark-color);
   font-size: 0.9rem;
 }
-.form-group input {
+
+.grupo-formulario input {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -267,12 +253,14 @@ body {
   font-size: 0.9rem;
   transition: var(--transition);
 }
-.form-group input:focus {
+
+.grupo-formulario input:focus {
   border-color: var(--primary-color);
   outline: none;
   box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.2);
 }
-#booking-form button {
+
+#formulario-reserva button {
   width: 100%;
   padding: var(--btn-padding);
   background: var(--primary-color);
